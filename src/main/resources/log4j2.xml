@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+    <Properties>
+        <property name="pattern">%d(HH:mm:ss) [%t] %-5level %logger{5} - %msg%n</property>
+    </Properties>
+    <Appenders>
+        <File name="TxtFile" filename="logs/text.log" append="false" bufferedIO="true">
+            <PatternLayout pattern="${pattern}"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <Appender-ref ref="TxtFile" level="info"/>
+        </Root>
+    </Loggers>
+</Configuration>
